@@ -38,15 +38,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  padding: 0.9rem 2.2rem;
+  padding: 0.8rem 1.85rem;
   background-color: var(--bg-eden-dark);
   color: var(--text-light);
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   border: none;
   outline: none;
@@ -54,6 +55,7 @@
   transition: var(--transition-smooth);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+  flex-shrink: 0;
 }
 
 /* Base double-line ornamental gold border via layered pseudo-elements */
@@ -189,15 +191,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 56px;
-  background-color: var(--bg-eden-dark);
-  color: var(--gold-primary);
+  width: 40px;
+  height: 44px;
+  background-color: rgba(30, 39, 31, 0.75);
+  color: var(--gold-light);
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition-smooth);
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 .social-crest-btn svg.crest-cartouche-outline {
@@ -209,15 +212,17 @@
   overflow: visible;
 }
 
+.social-crest-btn svg.crest-cartouche-outline rect.outer,
 .social-crest-btn svg.crest-cartouche-outline path.outer {
   stroke: var(--gold-primary);
-  stroke-width: 1.8;
+  stroke-width: 1.5;
   fill: none;
   transition: stroke 300ms ease;
 }
 
+.social-crest-btn svg.crest-cartouche-outline rect.inner,
 .social-crest-btn svg.crest-cartouche-outline path.inner {
-  stroke: var(--gold-primary);
+  stroke: rgba(168, 132, 80, 0.4);
   stroke-width: 1;
   fill: none;
   transition: stroke 300ms ease;
@@ -225,36 +230,36 @@
 
 .social-crest-btn .social-icon {
   position: relative;
-  width: 20px;
-  height: 20px;
-  fill: var(--gold-primary);
-  stroke: var(--gold-primary);
+  width: 17px;
+  height: 17px;
+  fill: var(--gold-light);
+  stroke: var(--gold-light);
   transition: var(--transition-smooth);
   z-index: 2;
 }
 
 .social-crest-btn:hover,
 .social-crest-btn:focus-visible {
-  background-color: #1e261f;
-  transform: translateY(-3px) scale(1.04);
+  background-color: rgba(40, 51, 41, 0.95);
+  transform: translateY(-2px);
   box-shadow: 
-    0 8px 20px rgba(0, 0, 0, 0.35),
-    inset 0 0 14px rgba(168, 132, 80, 0.35);
+    0 6px 18px rgba(0, 0, 0, 0.35),
+    inset 0 0 12px rgba(168, 132, 80, 0.3);
 }
 
+.social-crest-btn:hover svg.crest-cartouche-outline rect.outer,
 .social-crest-btn:hover svg.crest-cartouche-outline path.outer,
-.social-crest-btn:hover svg.crest-cartouche-outline path.inner,
-.social-crest-btn:focus-visible svg.crest-cartouche-outline path.outer,
-.social-crest-btn:focus-visible svg.crest-cartouche-outline path.inner {
+.social-crest-btn:focus-visible svg.crest-cartouche-outline rect.outer,
+.social-crest-btn:focus-visible svg.crest-cartouche-outline path.outer {
   stroke: var(--gold-light);
-  filter: drop-shadow(0 0 3px rgba(198, 166, 117, 0.5));
+  filter: drop-shadow(0 0 4px rgba(198, 166, 117, 0.6));
 }
 
 .social-crest-btn:hover .social-icon,
 .social-crest-btn:focus-visible .social-icon {
-  fill: var(--gold-light);
-  stroke: var(--gold-light);
-  transform: scale(1.12);
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+  transform: scale(1.15);
 }
 
 /* ==========================================================================
