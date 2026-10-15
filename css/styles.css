@@ -449,7 +449,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: calc(78px + 44px);
+  padding-top: calc(78px + 76px);
   padding-bottom: 2rem;
   overflow: hidden;
   background-color: var(--bg-eden-deeper);
@@ -1584,7 +1584,7 @@ textarea.form-control {
   .hero-home {
     min-height: 100vh;
     min-height: 100dvh;
-    padding-top: calc(68px + env(safe-area-inset-top, 0px) + 20px);
+    padding-top: calc(68px + env(safe-area-inset-top, 0px) + 36px);
     padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
     justify-content: flex-start;
   }
