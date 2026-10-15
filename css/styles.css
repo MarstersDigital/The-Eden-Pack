@@ -235,26 +235,19 @@ p {
   object-fit: cover;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--text-light);
-  line-height: 1.1;
+  color: var(--gold-light);
+  line-height: 1;
+  transition: color 250ms ease, text-shadow 250ms ease;
 }
 
-.brand-subtitle {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold-light);
+.brand-wrapper:hover .brand-title {
+  color: #F6F4EE;
+  text-shadow: 0 0 12px rgba(198, 166, 117, 0.4);
 }
 
 /* Desktop Navigation */
