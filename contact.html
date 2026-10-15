@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Locations Covered | The Eden Pack | Harrow & North West London</title>
+  <meta name="description" content="Unlock the gate to Eden. Enquire for countryside dog walking spaces, bespoke pet care, or outdoor photography sessions in Harrow, Pinner, and North West London.">
+  <meta name="keywords" content="dog walker harrow, dog walker pinner, pet sitting stanmore, pet photography enquiry, the eden pack contact">
+  <link rel="canonical" href="https://theedenpack.co.uk/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact The Eden Pack | Countryside Pet Care & Photography">
+  <meta property="og:description" content="Apply for countryside pack walking slots or book an outdoor photography session in Harrow, Pinner, and NW London.">
+  <meta property="og:image" content="Images/618123800_18038716250732883_6383195441002680751_n.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="Images/The%20Eden%20Pack%20Logo.jpg">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org ContactPage Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "The Eden Pack Contact & Application Hub",
+    "description": "Enquiry form and locations covered directory for The Eden Pack.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "The Eden Pack",
+      "telephone": "+447000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Harrow",
+        "addressRegion": "Greater London",
+        "addressCountry": "UK"
+      },
+      "areaServed": ["Harrow", "Pinner", "Stanmore", "Ruislip", "Northwood", "Bushey", "North West London"]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY GLASSMORPHIC HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="header-eden">
+    <div class="container header-container">
+      <a href="index.html" class="brand-wrapper" aria-label="The Eden Pack Home">
+        <div class="brand-logo-frame">
+          <img src="Images/The%20Eden%20Pack%20Logo.jpg" alt="The Eden Pack Vintage Key Crest">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">The Eden Pack</span>
+          <span class="brand-subtitle">Locations & Contact</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Pack Adventures</a>
+        <a href="photography.html" class="nav-link">Pet Photography</a>
+        <a href="contact.html" class="nav-link active">Locations & Contact</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="nav-actions">
+        <div class="nav-socials">
+          <a href="https://www.instagram.com/the_eden_pack/" target="_blank" rel="noopener noreferrer" class="social-crest-btn" aria-label="Follow The Eden Pack on Instagram">
+            <svg class="crest-cartouche-outline" viewBox="0 0 48 56">
+              <rect class="outer" x="2" y="2" width="44" height="52" rx="6" />
+              <rect class="inner" x="5" y="5" width="38" height="46" rx="4" />
+            </svg>
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100083046473308" target="_blank" rel="noopener noreferrer" class="social-crest-btn" aria-label="Visit The Eden Pack on Facebook">
+            <svg class="crest-cartouche-outline" viewBox="0 0 48 56">
+              <rect class="outer" x="2" y="2" width="44" height="52" rx="6" />
+              <rect class="inner" x="5" y="5" width="38" height="46" rx="4" />
+            </svg>
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+
+        <a href="#inquiry-form-section" class="btn-eden-crest">
+          <span class="crest-corner crest-corner--tl"></span>
+          <span class="crest-corner crest-corner--tr"></span>
+          <span class="crest-corner crest-corner--bl"></span>
+          <span class="crest-corner crest-corner--br"></span>
+          <span>Apply Now</span>
+        </a>
+
+        <!-- Mobile Trigger -->
+        <button class="menu-toggle" aria-label="Open mobile navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    <div class="brand-logo-frame" style="width: 64px; height: 64px; margin-bottom: 1.5rem;">
+      <img src="Images/The%20Eden%20Pack%20Logo.jpg" alt="The Eden Pack Crest">
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#services" class="nav-link">Pack Adventures</a>
+      <a href="photography.html" class="nav-link">Pet Photography</a>
+      <a href="contact.html" class="nav-link">Locations & Contact</a>
+    </div>
+
+    <svg class="drawer-divider" viewBox="0 0 100 24">
+      <path d="M10 12 L90 12 M50 4 L50 20" stroke="#A88450" stroke-width="1.5" />
+    </svg>
+
+    <a href="#inquiry-form-section" class="btn-eden-crest">
+      <span class="crest-corner crest-corner--tl"></span>
+      <span class="crest-corner crest-corner--tr"></span>
+      <span class="crest-corner crest-corner--bl"></span>
+      <span class="crest-corner crest-corner--br"></span>
+      <span>Apply for Pack Space</span>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       PAGE HEADER BANNER (Featuring 618123800...jpg Hilltop Overlooking London)
+       ======================================================================== -->
+  <section class="contact-banner-header" aria-label="Contact Banner">
+    <div class="contact-banner-bg">
+      <img src="Images/618123800_18038716250732883_6383195441002680751_n.jpg" alt="Pack standing peacefully on green hilltop overlooking Harrow and London skyline">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="eyebrow-badge reveal">
+        Harrow, Pinner & North West London
+      </div>
+      <h1 class="hero-headline reveal reveal-delay-1">
+        Unlock the Gate to Eden
+        <span class="gold-emphasis serif-italic">Your journey begins here.</span>
+      </h1>
+      <p class="hero-subheadline reveal reveal-delay-2">
+        Enquire about countryside pack walking spaces, bespoke one-to-one pet care, or natural-light outdoor photography sessions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN CONTACT & LOCATIONS GRID
+       ======================================================================== -->
+  <section id="inquiry-form-section" class="section section-dark" aria-label="Locations and Inquiry Form">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Left Column: Locations Covered & Interactive Map -->
+        <div class="reveal">
+          <div class="card-eden-crest coverage-hub-card">
+            <span class="card-corner card-corner--tl"></span>
+            <span class="card-corner card-corner--tr"></span>
+            <span class="card-corner card-corner--bl"></span>
+            <span class="card-corner card-corner--br"></span>
+
+            <div class="eyebrow-badge" style="margin-bottom: 0.75rem;">Service Territory</div>
+            <h3>Locations Covered</h3>
+            <p style="color: var(--text-muted-light); font-size: 0.96rem; margin-top: 0.5rem;">
+              We operate daily collections and drop-offs across our established North West London territory before escaping into private fields and protected woodland trails.
+            </p>
+
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-size: 1.05rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                Primary Collection Hub:
+              </h4>
+              <div class="coverage-pill-group">
+                <span class="coverage-pill primary-hub">✦ Harrow (HA1)</span>
+                <span class="coverage-pill primary-hub">✦ South Harrow (HA2)</span>
+                <span class="coverage-pill primary-hub">✦ Harrow Weald (HA3)</span>
+                <span class="coverage-pill primary-hub">✦ Pinner (HA5)</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-size: 1.05rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                Surrounding Enclaves Covered:
+              </h4>
+              <div class="coverage-pill-group">
+                <span class="coverage-pill">Stanmore (HA7)</span>
+                <span class="coverage-pill">Hatch End</span>
+                <span class="coverage-pill">Northwood (HA6)</span>
+                <span class="coverage-pill">Ruislip (HA4)</span>
+                <span class="coverage-pill">Eastcote</span>
+                <span class="coverage-pill">Bushey & Aldenham borders</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed var(--gold-muted);">
+              <p style="font-size: 0.9rem; color: var(--text-muted-light); font-style: italic;">
+                <strong>Note on Pet Photography:</strong> Our outdoor photo shoots are available across wider London, Hertfordshire, and Buckinghamshire countryside spots by special arrangement.
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Leaflet Map with Gold Frame -->
+          <div class="map-frame-wrapper">
+            <div id="coverage-map" role="region" aria-label="Interactive map showing The Eden Pack coverage area in Harrow and Pinner"></div>
+          </div>
+
+          <!-- Direct Social & Messenger Card -->
+          <div class="card-eden-crest" style="margin-top: 2rem;">
+            <span class="card-corner card-corner--tl"></span>
+            <span class="card-corner card-corner--tr"></span>
+            <span class="card-corner card-corner--bl"></span>
+            <span class="card-corner card-corner--br"></span>
+
+            <h4 style="color: var(--gold-light); margin-bottom: 0.5rem;">Prefer Direct Messaging?</h4>
+            <p style="color: var(--text-muted-light); font-size: 0.92rem; margin-bottom: 1.25rem;">
+              Connect with us directly on our active social channels. We respond promptly to Instagram direct messages:
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/the_eden_pack/" target="_blank" rel="noopener noreferrer" class="community-pill" style="font-size: 0.95rem; padding: 0.65rem 1.25rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width: 18px; height: 18px;">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                </svg>
+                <span>@the_eden_pack</span>
+              </a>
+
+              <a href="https://www.facebook.com/profile.php?id=100083046473308" target="_blank" rel="noopener noreferrer" class="community-pill" style="font-size: 0.95rem; padding: 0.65rem 1.25rem;">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Facebook Messenger</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Inquiry Form -->
+        <div class="reveal reveal-delay-1">
+          <div class="card-eden-crest">
+            <span class="card-corner card-corner--tl"></span>
+            <span class="card-corner card-corner--tr"></span>
+            <span class="card-corner card-corner--bl"></span>
+            <span class="card-corner card-corner--br"></span>
+
+            <div class="eyebrow-badge" style="margin-bottom: 0.75rem;">Application & Enquiry</div>
+            <h2>Apply / Enquire for Eden</h2>
+            <p style="color: var(--text-muted-light); margin-bottom: 1.75rem; font-size: 0.98rem;">
+              Please select the nature of your request so we can best tailor our response and schedule your pet's assessment or shoot consultation.
+            </p>
+
+            <!-- Service Type Selector Toggle -->
+            <div class="form-service-selector" role="radiogroup" aria-label="Select Enquiry Service">
+              <button type="button" class="service-toggle-btn active" data-service="walking" aria-pressed="true">
+                🐾 Dog Walking & Care
+              </button>
+              <button type="button" class="service-toggle-btn" data-service="photography" aria-pressed="false">
+                📷 Pet Photography
+              </button>
+            </div>
+
+            <!-- Form -->
+            <form id="eden-inquiry-form" novalidate>
+              <input type="hidden" id="selected-service" name="service" value="walking">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="client-name">Your Full Name <span class="req">*</span></label>
+                  <input type="text" id="client-name" name="name" class="form-control" required placeholder="e.g. Eleanor Vance">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="client-phone">Phone / WhatsApp <span class="req">*</span></label>
+                  <input type="tel" id="client-phone" name="phone" class="form-control" required placeholder="e.g. 07123 456789">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="client-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="client-email" name="email" class="form-control" required placeholder="eleanor@example.co.uk">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="client-location">Postcode & Area <span class="req">*</span></label>
+                  <input type="text" id="client-location" name="location" class="form-control" required placeholder="e.g. HA5, Pinner">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pet-details">Pet's Name(s), Breed(s) & Age(s) <span class="req">*</span></label>
+                <input type="text" id="pet-details" name="petDetails" class="form-control" required placeholder="e.g. Winston, Golden Retriever, 2 years">
+              </div>
+
+              <!-- Dynamic Field: Dog Walking Specific -->
+              <div id="walking-dynamic-fields" class="form-group">
+                <label class="form-label" for="walking-info">
+                  Required Days & Pack Temperament <span class="req">*</span>
+                </label>
+                <textarea id="walking-info" name="walkingInfo" class="form-control" placeholder="Please tell us about your required weekly walk schedule, your dog's recall reliability, sociability with other dogs, and general energy levels."></textarea>
+              </div>
+
+              <!-- Dynamic Field: Pet Photography Specific -->
+              <div id="photo-dynamic-fields" class="form-group" style="display: none;">
+                <label class="form-label" for="photo-info">
+                  Preferred Package, Season & Shoot Vision <span class="req">*</span>
+                </label>
+                <textarea id="photo-info" name="photoInfo" class="form-control" placeholder="Which package interests you (Woodland Mini £95, Signature £165, Bespoke Birthday)? Share any locations, seasons, or specific portrait ideas you have in mind."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="additional-notes">Additional Notes or Questions</label>
+                <textarea id="additional-notes" name="notes" class="form-control" placeholder="Any behavioral quirks, dietary sensitivities, or questions for our team..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-eden-crest" style="width: 100%; margin-top: 1rem;">
+                <span class="crest-corner crest-corner--tl"></span>
+                <span class="crest-corner crest-corner--tr"></span>
+                <span class="crest-corner crest-corner--bl"></span>
+                <span class="crest-corner crest-corner--br"></span>
+                <span>Send Enquiry to Eden</span>
+                <svg class="crest-btn-icon" viewBox="0 0 100 100">
+                  <ellipse cx="50" cy="55" rx="16" ry="14" />
+                  <circle cx="30" cy="32" r="7.5" />
+                  <circle cx="43" cy="22" r="7.5" />
+                  <circle cx="57" cy="22" r="7.5" />
+                  <circle cx="70" cy="32" r="7.5" />
+                </svg>
+              </button>
+            </form>
+
+            <div id="form-feedback-msg" class="form-feedback" role="alert"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="footer-eden">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Crest -->
+        <div class="footer-brand-crest">
+          <div class="footer-crest-logo">
+            <img src="Images/The%20Eden%20Pack%20Logo.jpg" alt="The Eden Pack Emblem">
+          </div>
+          <span style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--gold-light);">The Eden Pack</span>
+          <p class="footer-tagline">"Where love leads, peace follows."</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted-light);">
+            Boutique countryside dog walking, intentional pet care, and natural-light outdoor pet photography based in Harrow and Pinner, North West London.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-heading">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#ethos">Our Philosophy</a></li>
+            <li><a href="index.html#services">Pack Adventures</a></li>
+            <li><a href="photography.html">Pet Photography</a></li>
+            <li><a href="contact.html">Locations Covered</a></li>
+            <li><a href="contact.html#inquiry-form-section">Apply for Pack Space</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Service Zones -->
+        <div>
+          <h4 class="footer-heading">Service Hubs</h4>
+          <ul class="footer-links">
+            <li><span style="color: var(--gold-light);">Harrow (HA1, HA2, HA3)</span></li>
+            <li><span style="color: var(--gold-light);">Pinner (HA5)</span></li>
+            <li><span>Stanmore (HA7)</span></li>
+            <li><span>Ruislip (HA4)</span></li>
+            <li><span>Northwood (HA6)</span></li>
+            <li><span>Hatch End & Bushey</span></li>
+            <li><span style="font-size: 0.82rem; font-style: italic; color: var(--text-muted-light);">*Photography sessions across wider London & Herts</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Social & Inquiries -->
+        <div>
+          <h4 class="footer-heading">Follow The Journey</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted-light); margin-bottom: 1.25rem;">
+            Follow our daily visual diary and photography stories on Instagram:
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/the_eden_pack/" target="_blank" rel="noopener noreferrer" class="social-crest-btn" aria-label="The Eden Pack Instagram">
+              <svg class="crest-cartouche-outline" viewBox="0 0 48 56">
+                <rect class="outer" x="2" y="2" width="44" height="52" rx="6" />
+                <rect class="inner" x="5" y="5" width="38" height="46" rx="4" />
+              </svg>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100083046473308" target="_blank" rel="noopener noreferrer" class="social-crest-btn" aria-label="The Eden Pack Facebook">
+              <svg class="crest-cartouche-outline" viewBox="0 0 48 56">
+                <rect class="outer" x="2" y="2" width="44" height="52" rx="6" />
+                <rect class="inner" x="5" y="5" width="38" height="46" rx="4" />
+              </svg>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="contact.html" class="link-eden link-eden-light" style="font-size: 1.05rem;">
+              <span>Direct Booking Form</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sub-Footer -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Eden Pack. All rights reserved.
+        </div>
+        <div>
+          Handcrafted by <a href="https://marstersdigital.co.uk" target="_blank" rel="noopener noreferrer">Marsters Digital</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

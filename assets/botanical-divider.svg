@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 36" fill="none" stroke="currentColor">
+  <!-- Central Emblem -->
+  <g transform="translate(200, 18)" fill="#A88450" stroke="none">
+    <ellipse cx="0" cy="2" rx="4" ry="3.2"/>
+    <circle cx="-5" cy="-4" r="1.8"/>
+    <circle cx="-1.8" cy="-7" r="1.8"/>
+    <circle cx="1.8" cy="-7" r="1.8"/>
+    <circle cx="5" cy="-4" r="1.8"/>
+  </g>
+  <!-- Left Flourish -->
+  <path d="M185 18 C150 18 130 12 100 12 C70 12 50 24 15 18" stroke="#A88450" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M185 18 C175 14 165 14 160 11 C158 16 168 18 175 18" fill="#A88450" stroke="none"/>
+  <path d="M120 13 C115 8 105 8 100 5 C100 11 108 14 115 14" fill="#A88450" stroke="none"/>
+  <circle cx="10" cy="18" r="2" fill="#A88450"/>
+  <!-- Right Flourish -->
+  <path d="M215 18 C250 18 270 12 300 12 C330 12 350 24 385 18" stroke="#A88450" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M215 18 C225 14 235 14 240 11 C242 16 232 18 225 18" fill="#A88450" stroke="none"/>
+  <path d="M280 13 C285 8 295 8 300 5 C300 11 292 14 285 14" fill="#A88450" stroke="none"/>
+  <circle cx="390" cy="18" r="2" fill="#A88450"/>
+</svg>

@@ -1,0 +1,510 @@
+/* ==========================================================================
+   THE EDEN PACK - SIGNATURE "EDEN CREST" SYSTEM & DESIGN TOKENS
+   Inspired by the vintage botanical key emblem & scalloped cartouche logo
+   ========================================================================== */
+
+:root {
+  /* Brand Color Tokens */
+  --bg-eden-dark: #283329;       /* Deep Eden Forest Green */
+  --bg-eden-deeper: #1C241D;     /* Darker forest shade for footer & contrast cards */
+  --bg-parchment: #F6F4EE;       /* Warm Oat/Parchment for light narrative sections */
+  --bg-parchment-alt: #EBE6DA;   /* Soft stone for secondary cards and form inputs */
+  
+  --gold-primary: #A88450;       /* Antique Gold */
+  --gold-light: #C6A675;         /* Hover state & highlight shimmer gold */
+  --gold-muted: rgba(168, 132, 80, 0.35); /* Hairline dividers & inactive borders */
+  --gold-glow: rgba(168, 132, 80, 0.25);  /* Subtle atmospheric aura */
+
+  --text-light: #F6F4EE;         /* Primary text on Eden Dark */
+  --text-dark: #222923;          /* Primary text on Parchment */
+  --text-muted-light: #B8C2B9;   /* Secondary text on dark backgrounds */
+  --text-muted-dark: #525B53;    /* Secondary text on light backgrounds */
+
+  /* Typography Stacks */
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: all 200ms ease;
+}
+
+/* ==========================================================================
+   1. PRIMARY & SECONDARY CREST BUTTONS (.btn-eden-crest)
+   ========================================================================== */
+.btn-eden-crest {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--bg-eden-dark);
+  color: var(--text-light);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  isolation: isolate;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+/* Base double-line ornamental gold border via layered pseudo-elements */
+.btn-eden-crest::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gold-primary);
+  border-radius: 4px;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+.btn-eden-crest::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid var(--gold-primary);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+/* Scalloped decorative corner brackets (Corner Florets) */
+.btn-eden-crest .crest-corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--gold-light);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  z-index: 2;
+}
+
+.btn-eden-crest .crest-corner--tl {
+  top: 1px;
+  left: 1px;
+  border-top: 2px solid var(--gold-light);
+  border-left: 2px solid var(--gold-light);
+}
+
+.btn-eden-crest .crest-corner--tr {
+  top: 1px;
+  right: 1px;
+  border-top: 2px solid var(--gold-light);
+  border-right: 2px solid var(--gold-light);
+}
+
+.btn-eden-crest .crest-corner--bl {
+  bottom: 1px;
+  left: 1px;
+  border-bottom: 2px solid var(--gold-light);
+  border-left: 2px solid var(--gold-light);
+}
+
+.btn-eden-crest .crest-corner--br {
+  bottom: 1px;
+  right: 1px;
+  border-bottom: 2px solid var(--gold-light);
+  border-right: 2px solid var(--gold-light);
+}
+
+/* Interactive SVG Icon inside Button (Key or Paw) */
+.btn-eden-crest .crest-btn-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: var(--gold-primary);
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), fill 300ms ease;
+  flex-shrink: 0;
+}
+
+/* Hover & Focus States */
+.btn-eden-crest:hover,
+.btn-eden-crest:focus-visible {
+  background-color: #1f2820;
+  color: var(--gold-light);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.35),
+    inset 0 0 18px rgba(168, 132, 80, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-eden-crest:hover::before,
+.btn-eden-crest:focus-visible::before {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 10px rgba(198, 166, 117, 0.4);
+}
+
+.btn-eden-crest:hover::after,
+.btn-eden-crest:focus-visible::after {
+  border-color: var(--gold-light);
+}
+
+.btn-eden-crest:hover .crest-btn-icon,
+.btn-eden-crest:focus-visible .crest-btn-icon {
+  fill: var(--gold-light);
+  transform: translateX(4px);
+}
+
+.btn-eden-crest:active {
+  transform: translateY(0);
+  box-shadow: inset 0 0 12px rgba(168, 132, 80, 0.4);
+}
+
+/* Secondary Button Variant (Light Parchment / Inverted) */
+.btn-eden-crest--secondary {
+  background-color: transparent;
+  color: var(--gold-primary);
+}
+
+.btn-eden-crest--secondary::before {
+  border-color: var(--gold-primary);
+}
+
+.btn-eden-crest--secondary::after {
+  border-color: var(--gold-muted);
+}
+
+.btn-eden-crest--secondary:hover,
+.btn-eden-crest--secondary:focus-visible {
+  background-color: var(--bg-eden-dark);
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   2. SOCIAL MEDIA CREST BADGES (.social-crest-btn)
+   Miniature scalloped double-line gold crest (48px x 56px)
+   ========================================================================== */
+.social-crest-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 56px;
+  background-color: var(--bg-eden-dark);
+  color: var(--gold-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-crest-btn svg.crest-cartouche-outline {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.social-crest-btn svg.crest-cartouche-outline path.outer {
+  stroke: var(--gold-primary);
+  stroke-width: 1.8;
+  fill: none;
+  transition: stroke 300ms ease;
+}
+
+.social-crest-btn svg.crest-cartouche-outline path.inner {
+  stroke: var(--gold-primary);
+  stroke-width: 1;
+  fill: none;
+  transition: stroke 300ms ease;
+}
+
+.social-crest-btn .social-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  fill: var(--gold-primary);
+  stroke: var(--gold-primary);
+  transition: var(--transition-smooth);
+  z-index: 2;
+}
+
+.social-crest-btn:hover,
+.social-crest-btn:focus-visible {
+  background-color: #1e261f;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    inset 0 0 14px rgba(168, 132, 80, 0.35);
+}
+
+.social-crest-btn:hover svg.crest-cartouche-outline path.outer,
+.social-crest-btn:hover svg.crest-cartouche-outline path.inner,
+.social-crest-btn:focus-visible svg.crest-cartouche-outline path.outer,
+.social-crest-btn:focus-visible svg.crest-cartouche-outline path.inner {
+  stroke: var(--gold-light);
+  filter: drop-shadow(0 0 3px rgba(198, 166, 117, 0.5));
+}
+
+.social-crest-btn:hover .social-icon,
+.social-crest-btn:focus-visible .social-icon {
+  fill: var(--gold-light);
+  stroke: var(--gold-light);
+  transform: scale(1.12);
+}
+
+/* ==========================================================================
+   3. CLICKABLE TEXT LINKS (.link-eden)
+   ========================================================================== */
+.link-eden {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+/* Light Background Context */
+.link-eden,
+.on-light .link-eden {
+  color: var(--gold-primary);
+}
+
+.link-eden:hover,
+.on-light .link-eden:hover {
+  color: #7d5e32;
+}
+
+/* Dark Background Context */
+.on-dark .link-eden,
+.link-eden-light {
+  color: var(--gold-light);
+}
+
+.on-dark .link-eden:hover,
+.link-eden-light:hover {
+  color: #F6F4EE;
+}
+
+/* Ornamental center-expanding underline */
+.link-eden::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  transition: width 300ms cubic-bezier(0.22, 1, 0.36, 1), left 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-eden:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Navigation Links */
+.nav-link {
+  position: relative;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: color 250ms ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-light);
+  transition: width 300ms cubic-bezier(0.22, 1, 0.36, 1), left 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold-light);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 1.5rem);
+  left: 0.75rem;
+}
+
+/* ==========================================================================
+   4. ORNATE CREST CARDS (.card-eden-crest)
+   ========================================================================== */
+.card-eden-crest {
+  position: relative;
+  background-color: var(--bg-eden-dark);
+  color: var(--text-light);
+  padding: 2.25rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-smooth);
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-eden-crest::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gold-primary);
+  border-radius: 8px;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+.card-eden-crest::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold-muted);
+  border-radius: 5px;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+.card-eden-crest:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 0 24px rgba(168, 132, 80, 0.15);
+}
+
+.card-eden-crest:hover::before {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 14px rgba(198, 166, 117, 0.3);
+}
+
+.card-eden-crest:hover::after {
+  border-color: var(--gold-primary);
+}
+
+/* Light Card Variant */
+.card-eden-crest--light {
+  background-color: var(--bg-parchment-alt);
+  color: var(--text-dark);
+}
+
+.card-eden-crest--light::after {
+  border-color: rgba(168, 132, 80, 0.25);
+}
+
+/* Corner Florets for Cards */
+.card-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--gold-primary);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  z-index: 2;
+}
+
+.card-corner--tl {
+  top: 3px;
+  left: 3px;
+  border-top: 2px solid var(--gold-primary);
+  border-left: 2px solid var(--gold-primary);
+}
+
+.card-corner--tr {
+  top: 3px;
+  right: 3px;
+  border-top: 2px solid var(--gold-primary);
+  border-right: 2px solid var(--gold-primary);
+}
+
+.card-corner--bl {
+  bottom: 3px;
+  left: 3px;
+  border-bottom: 2px solid var(--gold-primary);
+  border-left: 2px solid var(--gold-primary);
+}
+
+.card-corner--br {
+  bottom: 3px;
+  right: 3px;
+  border-bottom: 2px solid var(--gold-primary);
+  border-right: 2px solid var(--gold-primary);
+}
+
+.card-eden-crest:hover .card-corner {
+  border-color: var(--gold-light);
+}
+
+/* ==========================================================================
+   5. ARCHED & SCALLOPED IMAGE FRAMES (.frame-eden-crest)
+   ========================================================================== */
+.frame-eden-crest {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+}
+
+.frame-eden-crest::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gold-primary);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.frame-eden-crest::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold-light);
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.frame-eden-crest img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.frame-eden-crest:hover img {
+  transform: scale(1.03);
+}
+
+/* Arch Variant for Editorial Sections */
+.frame-eden-arch {
+  border-radius: 140px 140px 12px 12px;
+}
+
+.frame-eden-arch::before {
+  border-radius: 140px 140px 12px 12px;
+}
+
+.frame-eden-arch::after {
+  border-radius: 134px 134px 8px 8px;
+}
